@@ -1,7 +1,3 @@
-function createUser(root, args, context) {
-  return context.prisma.createUser({ name: args.name })
-}
-
 function posts(root, args, context) {
   return context.prisma
     .user({
@@ -11,6 +7,5 @@ function posts(root, args, context) {
 }
 
 module.exports = {
-  createUser,
   posts
 }
